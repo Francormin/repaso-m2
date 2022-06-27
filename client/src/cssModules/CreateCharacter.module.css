@@ -1,135 +1,142 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    background: url('https://wallpaperaccess.com/full/5841059.jpg');
-    padding: 20px;
-    border-radius: 10px;
-    margin: auto;
-    width: 80%;
-    border-top: 20px solid rgb(211, 211, 211);
-    height: 700px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(br-ba4.webp);
+  background-position: top;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  width: 80%;
+  margin-top: 30px;
+  border-top: 60px solid rgb(0, 54, 0);
+  height: 550px;
+  box-shadow: 0 10px 30px #000;
 }
 
 .title {
-    font-family: 'Sigmar One', cursive;
-    color: #ff0;
-    font-size: 50px;
-    text-shadow: 0 10px 30px #000;
-    margin: auto;
+  font-family: "Sigmar One", cursive;
+  color: rgb(178, 178, 0);
+  font-size: 35px;
+  text-shadow: 0 15px 30px #000;
+  display: flex;
+  justify-content: center;
+  margin-top: -75px;
 }
 
 .form {
-    background: rgba(255, 255, 255, 0.575);
-    width: 500px;
-    flex-direction: column;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    box-shadow: 0 10px 30px #000;
-    text-shadow: 0 20px 30px #000;
-    padding: 15px;
-    color: #000;
-    font-size: 30px;
-    border-radius: 50px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
+  background: rgba(255, 255, 255, 0.575);
+  width: 550px;
+  flex-direction: column;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px #000;
+  padding: 20px;
+  color: #000;
+  font-size: 20px;
+  border-radius: 50px;
+  font-family: "DM Mono", monospace;
 }
 
 .contName {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.contNick {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contOther {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }
 
 .input {
-    padding: .7em;
-    border: none;
-    background: none;
-    outline: 0;
-    color: #000;
-    border-bottom: 1.5px solid #00ff00;
-    transition: .3s;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #000;
+  border-bottom: 2px solid #00ff00;
+  margin-top: 10px;
 }
 
-.input:hover,
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
 .input:focus {
-    border-bottom: 1.5px solid #00ffdd;
+  border-bottom: 2.5px solid #b0dc00;
+  height: 20px;
 }
 
 .button {
-    margin: auto;
-    margin-top: 5px;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border: none;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.863);
-    height: 90px;
-    width: 90px;
-    font-family: 'Dongle', sans-serif;
-    font-size: 25px;
-    transition: all .3s;
-    color: #fff;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(0, 54, 0);
+  height: 90px;
+  width: 90px;
+  font-family: "Dongle", sans-serif;
+  font-size: 20px;
+  transition: all 0.3s;
+  color: rgb(178, 178, 0);
+  box-shadow: 0 10px 30px #000;
+  cursor: none;
 }
 
 .button:hover {
-    background: rgba(41, 41, 41, 0.863);
+  background: rgb(178, 178, 0);
+  color: rgb(0, 54, 0);
 }
 
 .link {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: rgb(178, 178, 0);
 }
 
-.contTemperament {
-    display: flex;
-    justify-content: center;
+.link:hover {
+  color: rgb(0, 54, 0);
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  color: rgb(178, 178, 0);
+}
+
+.submit:hover {
+  background-color: rgb(178, 178, 0);
+  color: black;
+  font-variant: small-caps;
 }
 
 .remove {
-    margin-top: 20px;
-    background: #ff0;
-    font-size: 20px;
-    border-radius: 20px;
-    border: none;
-    margin: 10px;
-    border: 1px solid #000;
-    box-shadow: 2px 5px #fff, 1px 1px #000;
+  margin-top: 20px;
+  background: #ff0;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  border: 1px solid #000;
+  box-shadow: 2px 5px #fff, 1px 1px #000;
 }
 
 .required {
-    color: #ff0;
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
+  color: #ff0;
+  font-family: "DM Mono", monospace;
+  font-size: 20px;
 }
 
 .remove:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .noDogs {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    max-width: max-content;
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
-    color: #000;
-    font-size: 30px;
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: max-content;
+  font-family: "DM Mono", monospace;
+  font-size: 25px;
+  color: #000;
+  border-radius: 10px;
 }
