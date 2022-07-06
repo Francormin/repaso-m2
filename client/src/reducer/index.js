@@ -1,9 +1,9 @@
-import { CHARACTER_DETAILS, CREATE_CHARACTER, GET_CHARACTERS } from "../actions";
+import { CHARACTER_DETAILS, CREATE_CHARACTER, GET_CHARACTERS } from '../actions';
 
 const initialState = {
-    characters: [],
-    details: {},
-    charactersCreated: []
+  characters: [],
+  details: {},
+  charactersCreated: [],
 };
 
 let index = 117;
@@ -12,25 +12,25 @@ let index = 117;
 returns modificando el estado dependiendo de lo que se requiera en cada accion */
 
 const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case GET_CHARACTERS:
-            return {
-                ...state,
-                characters: [...action.payload, ...state.charactersCreated]
-            };
-        case CHARACTER_DETAILS:
-            return {
-                ...state,
-                details: action.payload
-            };
-        case CREATE_CHARACTER:
-            return {
-                ...state,
-                charactersCreated: [...state.charactersCreated, { ...action.payload, id: index++ }]
-            };
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case GET_CHARACTERS:
+      return {
+        ...state,
+        characters: [...action.payload, ...state.charactersCreated],
+      };
+    case CHARACTER_DETAILS:
+      return {
+        ...state,
+        details: action.payload,
+      };
+    case CREATE_CHARACTER:
+      return {
+        ...state,
+        charactersCreated: [...state.charactersCreated, { ...action.payload, id: index++ }],
+      };
+    default:
+      return state;
+  }
 };
 
 export default reducer;

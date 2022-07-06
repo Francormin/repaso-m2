@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { getCharacter } from "../actions";
-import details from "../cssModules/Details.module.css";
-import gif from "../assets/loading.gif";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { getCharacter } from '../actions';
+import details from '../cssModules/Details.module.css';
+import gif from '../assets/loading.gif';
 
 /* Commponente de detalles, en el cual renderizaran los datos del personaje que se desee, se toma el
 id del personaje el cual viene por url y a partir de una action pasandole como parametro el id del personaje
@@ -14,9 +14,7 @@ export default function Details() {
   const dispatch = useDispatch();
   const characterDetails = useSelector((state) => state.details);
   const charactersCreated = useSelector((state) => state.charactersCreated);
-  const characterCreatedDetail = charactersCreated.find(
-    (character) => character.id == id
-  );
+  const characterCreatedDetail = charactersCreated.find((character) => character.id === Number(id));
 
   const [loading, setLoading] = useState(true);
 
@@ -25,10 +23,9 @@ export default function Details() {
     setTimeout(() => {
       setLoading(false);
     }, 1500);
-  }, []);
+  }, [id]);
 
   return (
-    <>
       {loading || !!characterDetails.length ? (
         <div className={details.container}>
           <img src={gif} alt="gif" />
@@ -36,11 +33,7 @@ export default function Details() {
       ) : characterCreatedDetail ? (
         <div>
           <div className={details.divImg}>
-            <img
-              className={details.img}
-              src={characterCreatedDetail.img}
-              alt="img"
-            />
+            <img className={details.img} src={characterCreatedDetail.img} alt="img" />
           </div>
           <div className={details.divData}>
             <div className={details.info}>
@@ -65,9 +58,9 @@ export default function Details() {
               <p>Nickname: {characterDetails.nickname}</p>
               <p>
                 Occupations:
-                {characterDetails.occupation?.map((o, i) => {
-                  return <li key={i}>{o}</li>;
-                })}
+                {characterDetails.occupation?.map((o, i) => (
+                  <li key={i}>{o}</li>
+                ))}
               </p>
             </div>
           </div>
@@ -78,6 +71,5 @@ export default function Details() {
           </div>
         </div>
       )}
-    </>
   );
 }

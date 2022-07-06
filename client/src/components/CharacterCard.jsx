@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import characterCard from "../cssModules/CharacterCard.module.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import characterCard from '../cssModules/CharacterCard.module.css';
 
 /* Aqui van a tomar cada una de la data que se envio desde Cards y van a mostrarla como si fuese una tarjeta
 en el orden que les guste */

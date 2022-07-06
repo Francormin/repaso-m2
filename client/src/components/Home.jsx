@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import Cards from "./Cards";
-import { useDispatch, useSelector } from "react-redux";
-import { getCharacters } from "../actions";
-import home from "../cssModules/Home.module.css";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import Cards from './Cards';
+import { getCharacters } from '../actions';
+import home from '../cssModules/Home.module.css';
 
 /* Dentro de este componente tendran que crear y renderizar un titulo que indique donde estas (en este caso seria en home),
 un Link el cual deberia redirigir a la ruta '/create' con un texto que diga su accion y el componente Cards pasandole
@@ -27,7 +27,7 @@ export default function Home() {
       </div>
 
       <Link to="/create">
-        <button>Create a New Character</button>
+        <button type="button">Create a New Character</button>
       </Link>
 
       <Cards characters={characters} />
